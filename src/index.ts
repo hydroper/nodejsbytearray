@@ -21,7 +21,7 @@ export default class ByteArray {
 
     public static withZeroes(length: number): ByteArray {
         let r = new ByteArray();
-        r._buffer = Buffer.alloc(length);
+        r._buffer = Buffer.alloc(Math.max(2, length));
         r._length = length;
         return r;
     }
@@ -33,6 +33,7 @@ export default class ByteArray {
             r._length = r._buffer.length;
         } else {
             r._buffer = Buffer.from(arg);
+            r._buffer = r._buffer.length > 0 ? r._buffer : Buffer.allocUnsafe(2);
             r._length = arg.length;
         }
         return r;
