@@ -59,6 +59,10 @@ export default class ByteArray {
         return this._length;
     }
 
+    public set length(value) {
+        this._length = Math.min(Math.max(0, value), this._length);
+    }
+
     public get position(): number {
         return this._index;
     }

@@ -37,7 +37,7 @@ export declare default class ByteArray {
 
     endian: Endian;
     position: number;
-    readonly length: number;
+    length: number;
     readonly bytesAvailable: number;
     readonly hasBytesAvailable: boolean;
 
