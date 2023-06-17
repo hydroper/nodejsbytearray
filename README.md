@@ -16,8 +16,8 @@ export type Endian = 'littleEndian' | 'bigEndian';
 export declare default class ByteArray {
     constructor();
 
-    static withCapacity(initialCapacity: number): ByteArray;
     static from(argument: ByteArray | Buffer): ByteArray;
+    static withCapacity(initialCapacity: number): ByteArray;
     static withZeroes(length: number): ByteArray;
 
     toNodejsBuffer(): Buffer;
