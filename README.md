@@ -27,7 +27,7 @@ export declare default class ByteArray {
     position: number;
     readonly length: number;
     readonly bytesAvailable: number;
-    readonly hasBytesAvailable: number;
+    readonly hasBytesAvailable: boolean;
 
     /**
      * Clears the array. `keepCapacity` is false by default.
