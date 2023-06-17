@@ -43,6 +43,10 @@ export default class ByteArray {
         return Buffer.from(this._buffer.subarray(0, this._length));
     }
 
+    public equals(other: ByteArray): boolean {
+        return this._buffer.subarray(0, this._length).equals(other._buffer.subarray(0, other._length));
+    }
+
     public get endian(): Endian {
         return this._endian;
     }

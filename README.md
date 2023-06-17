@@ -46,6 +46,7 @@ export declare default class ByteArray {
      */
     clear(keepCapacity?: boolean);
 
+    equals(other: ByteArray): boolean;
     at(position: number): number;
     set(position: number, value: number);
 
