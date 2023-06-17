@@ -8,6 +8,18 @@ Growable byte array for Node.js.
 npm i com.hydroper.util.nodejsbytearray
 ```
 
+## Basic Usage
+
+```typescript
+import ByteArray, {Endian} from 'com.hydroper.util.nodejsbytearray';
+
+let ba = new ByteArray;
+ba.endian = 'littleEndian';
+ba.writeUTF8('foo');
+ba.position = 0;
+console.log(ba.readUTF8(3)); // foo
+```
+
 ## API
 
 ```typescript
