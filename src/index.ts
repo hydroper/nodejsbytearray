@@ -273,6 +273,10 @@ export default class ByteArray {
         return k.toString('utf8');
     }
 
+    /**
+     * Writes UTF-8 string. This method does not write the string length
+     * to the `ByteArray`.
+     */
     public writeUTF8(value: string) {
         var buf = Buffer.from(value, 'utf8');
         this._growIfRequired(buf.length);
@@ -287,6 +291,10 @@ export default class ByteArray {
         return ByteArray.from(k);
     }
 
+    /**
+     * Writes bytes. This method does not write the `value` length
+     * to the `ByteArray`.
+     */
     public writeBytes(value: ByteArray) {
         var buf = value.toNodejsBuffer();
         this._growIfRequired(buf.length);
